@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Asistente de Expresión de Temas</title>
+</head>
+<body class="bg-gradient-to-r from-blue-200 via-pink-100 to-yellow-200 min-h-screen flex flex-col items-center p-5">
+  <!-- Header -->
+  <header class="text-center mb-8">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">Asistente de Expresión de Temas</h1>
+    <p class="text-lg text-gray-600">Ingrese un tema para obtener ayuda sobre cómo presentarlo y analizarlo eficazmente.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6">
+    <!-- Input Section -->
+    <section class="mb-6">
+      <label for="input-topic" class="block text-lg font-semibold text-gray-700 mb-2">Ingrese su tema:</label>
+      <textarea 
+        id="input-topic" 
+        class="w-full border border-gray-300 rounded-lg p-3 shadow focus:outline-none focus:ring focus:ring-blue-300" 
+        rows="5" 
+        placeholder="Ejemplo: El impacto de las redes sociales en la comunicación moderna."></textarea>
+      <button 
+        id="process-btn" 
+        class="mt-4 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+        Analizar Tema
+      </button>
+    </section>
+
+    <!-- Output Section -->
+    <section id="output-section" class="hidden">
+      <!-- Factors and Suggestions -->
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-300 pb-2">Factores importantes y puntos objetivos:</h2>
+        <ul id="factors-list" class="list-disc list-inside text-gray-700 space-y-2"></ul>
+      </div>
+
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-300 pb-2">Forma sugerida de expresarlo:</h2>
+        <p id="suggested-expression" class="text-gray-700"></p>
+      </div>
+
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-300 pb-2">Ejemplo práctico:</h2>
+        <ul id="practical-examples" class="list-disc list-inside text-gray-700 space-y-2"></ul>
+      </div>
+
+      <!-- Public Presentation Section -->
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-300 pb-2">Presentación en público:</h2>
+        <ul id="presentation-tips" class="list-disc list-inside text-gray-700 space-y-2"></ul>
+      </div>
+
+      <!-- Graphic Representation -->
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-300 pb-2">Representación gráfica sugerida:</h2>
+        <div id="chart-section" class="space-y-6 text-center"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-10 text-gray-600 text-sm">
+    &copy; 2024 - Herramienta creada con amor para simplificar tus temas.
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="topics.js" type="module"></script>
+  <script src="charts.js" type="module"></script>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
